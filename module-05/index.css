@@ -1,0 +1,51 @@
+h1, h2, p, a {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+
+    color: aliceblue;
+}
+
+a {
+    padding: 4px;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+body {
+    background-color: moccasin;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    width: 60%;
+    margin: 0px auto;
+    padding: 8px;
+}
+
+nav {
+    margin: 0px;
+    padding: 0px;
+}
+
+header > nav {
+    border-top: 1px solid greenyellow;
+    border-bottom: 1px solid greenyellow;
+
+    padding: 6px;
+}
+
+footer {
+    border-top: 1px solid greenyellow;
+    padding: 6px;
+}
+
+footer > nav {
+    text-align: right;
+    color: blanchedalmond;
+}
