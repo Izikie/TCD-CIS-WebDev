@@ -1,3 +1,5 @@
+/* Text */
+
 h1, h2, p, a {
     font-family: "Inter Tight", sans-serif;
     font-optical-sizing: auto;
@@ -9,19 +11,26 @@ a {
     padding: 4px;
 }
 
+a[target="_blank"]{
+    color: blanchedalmond;
+}
+
 a:hover {
     color: greenyellow;
 }
 
+/* Page */
+
 body {
-    background-color: moccasin;
+    background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1700000000");
+    background-size: cover;
 
     margin: 0px;
     padding: 0px;
 }
 
 #container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.65);
 
     width: 60%;
     margin: 0px auto;
@@ -29,20 +38,28 @@ body {
 }
 
 nav {
-    margin: 0px;
-    padding: 0px;
+    padding: 6px;
 }
+
+/* Header */
 
 header > nav {
     border-top: 1px solid greenyellow;
     border-bottom: 1px solid greenyellow;
-
-    padding: 6px;
 }
+
+header > h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    
+    margin-bottom: 18px;
+}
+
+/* Footer */
 
 footer {
     border-top: 1px solid greenyellow;
-    padding: 6px;
 }
 
 footer > nav {
