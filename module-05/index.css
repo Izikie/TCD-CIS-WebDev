@@ -1,6 +1,4 @@
-/* Text */
-
-h1, h2, p, a {
+h1, h2, p, a, ul {
     font-family: "Inter Tight", sans-serif;
     font-optical-sizing: auto;
 
@@ -11,15 +9,17 @@ a {
     padding: 4px;
 }
 
-a[target="_blank"]{
+/* Fulfill attribute selector */
+a[target="_blank"] {
     color: blanchedalmond;
 }
 
+/* Fulfill :hover state */
 a:hover {
     color: greenyellow;
 }
 
-/* Page */
+/* -------------------------------------------------- */
 
 body {
     background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1700000000");
@@ -29,6 +29,7 @@ body {
     padding: 0px;
 }
 
+/* Fulfill ID selector */
 #container {
     background-color: rgba(0, 0, 0, 0.65);
 
@@ -37,18 +38,32 @@ body {
     padding: 8px;
 }
 
+/* -------------------------------------------------- */
+
+section {
+    border-left: 2px solid greenyellow;
+
+    padding-left: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+/* -------------------------------------------------- */
+
 nav {
     padding: 6px;
 }
 
-/* Header */
-
-header > nav {
+/* Fulfill decendant selector */
+header nav {
     border-top: 1px solid greenyellow;
     border-bottom: 1px solid greenyellow;
 }
 
-header > h1 {
+/* Fulfill child selector */
+header h1 {
     text-align: center;
     text-decoration: underline;
     text-decoration-thickness: 4px;
@@ -56,13 +71,12 @@ header > h1 {
     margin-bottom: 18px;
 }
 
-/* Footer */
-
 footer {
     border-top: 1px solid greenyellow;
 }
 
-footer > nav {
+/* Fulfill child selector */
+footer nav {
     text-align: right;
     color: blanchedalmond;
 }
