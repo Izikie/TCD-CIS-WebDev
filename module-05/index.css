@@ -1,82 +1,109 @@
-h1, h2, p, a, ul {
+h1, h2, p, a, ul, li {
     font-family: "Inter Tight", sans-serif;
     font-optical-sizing: auto;
-
     color: aliceblue;
 }
 
-a {
-    padding: 4px;
-}
-
-/* Fulfill attribute selector */
+/* Attribute selector */
 a[target="_blank"] {
     color: blanchedalmond;
 }
 
-/* Fulfill :hover state */
+/* Pseudo-class */
 a:hover {
     color: greenyellow;
 }
 
-/* -------------------------------------------------- */
-
-body {
-    background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1700000000");
-    background-size: cover;
-
-    margin: 0px;
-    padding: 0px;
+/* Class selector */
+.site-link {
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-/* Fulfill ID selector */
+/* !important rule: Necessary to ensure the background displays over any inherited styles */
+body {
+    background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1700000000") !important;
+    background-size: cover;
+    background-attachment: fixed;
+
+    margin: 0px;
+}
+
+/* ID selector */
 #container {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.75);
 
     width: 60%;
     margin: 0px auto;
-    padding: 8px;
+    padding: 16px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
-
-/* -------------------------------------------------- */
 
 section {
     border-left: 2px solid greenyellow;
 
-    padding-left: 6px;
+    padding-left: 12px;
     padding-top: 1px;
     padding-bottom: 1px;
     margin-bottom: 12px;
     margin-top: 12px;
 }
 
-/* -------------------------------------------------- */
-
-nav {
-    padding: 6px;
-}
-
-/* Fulfill decendant selector */
-header nav {
-    border-top: 1px solid greenyellow;
-    border-bottom: 1px solid greenyellow;
-}
-
-/* Fulfill child selector */
-header h1 {
+/* Combinator (Child Selector) */
+header > h1 {
     text-align: center;
     text-decoration: underline;
     text-decoration-thickness: 4px;
-    
+
     margin-bottom: 18px;
 }
 
-footer {
+header nav {
     border-top: 1px solid greenyellow;
+    border-bottom: 1px solid greenyellow;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 6px;
 }
 
-/* Fulfill child selector */
-footer nav {
-    text-align: right;
-    color: blanchedalmond;
+/* Descendant selector 1 */
+header nav a {
+    padding: 5px;
+}
+
+/* Descendant selector 2 */
+main section p {
+    margin-bottom: 10px;
+}
+
+/* nth-of-type selector */
+li:nth-of-type(odd) {
+    color: greenyellow;
+}
+
+/* Footer Styles */
+footer {
+    border-top: 1px solid greenyellow;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Descendant selector 3 */
+footer nav a {
+    padding: 5px;
+}
+
+/* Combinator (Child Selector) */
+footer > nav {
+    display: flex;
+    gap: 10px;
 }
